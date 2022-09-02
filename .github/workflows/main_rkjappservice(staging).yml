@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/jainrohitk/mynginx:v3
+        tags: index.docker.io/jainrohitk/mynginx:v4
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'rkjappservice'
         slot-name: 'staging'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_9d56a01299cf4795814c6da72e19e5d9 }}
-        images: index.docker.io/jainrohitk/mynginx:v3
+        images: index.docker.io/jainrohitk/mynginx:v4
